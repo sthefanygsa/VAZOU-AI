@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Vazou AI? | Dashboard</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="sidebar-logo">Vazou AI?</h1>
+            <p class="sidebar-subtitle">Precision Monitoring</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a class="nav-item active" href="#">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span>Overview</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">water_drop</span>
+                <span>Leak Detection</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">monitoring</span>
+                <span>Analytics</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined">settings</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="btn-new-scan">
+                <span class="material-symbols-outlined">add</span>
+                New Scan
+            </button>
+            <a class="nav-item-footer" href="#">
+                <span class="material-symbols-outlined">help</span>
+                Support
+            </a>
+            <a class="nav-item-footer" href="#">
+                <span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        
+        <header class="top-bar">
+            <div class="sensor-binder">
+                <div class="sensor-input-group">
+                    <label for="sensor-id">SENSOR ID</label>
+                    <input id="sensor-id" placeholder="VX-9900-A2" type="text"/>
+                </div>
+                <button class="btn-vincular">Vincular</button>
+            </div>
+
+            <div class="user-status">
+                <div class="scanning-indicator">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">System Scanning</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" alt="User" class="user-avatar">
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+            
+            <div class="stats-grid">
+                <div class="card">
+                    <div class="card-top">
+                        <h3 class="card-label">Status do Sistema</h3>
+                        <div class="status-content">
+                            <span class="material-symbols-outlined icon-status-ok" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <div>
+                                <p class="status-main">Normal</p>
+                                <p class="status-sub">Nenhuma irregularidade</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span>Última checagem: Agora</span>
+                        <span class="tag-secure">Seguro</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <h3 class="card-label">Vazão Atual</h3>
+                        <div class="flow-display">
+                            <span class="flow-value">0.0</span>
+                            <span class="flow-unit">L/min</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-column">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 2%;"></div>
+                        </div>
+                        <p class="progress-desc">Uso residual detectado</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <h3 class="card-label">Controle de Fluxo</h3>
+                        <div class="valve-control">
+                            <span class="valve-name">Válvula Solenoide</span>
+                            <div class="toggle-switch active">
+                                <div class="toggle-knob"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag-open">ABERTA</span>
+                        <button class="btn-close">Fechar agora</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="chart-section">
+                <div class="chart-header">
+                    <div>
+                        <h2 class="chart-title">Histórico Diário</h2>
+                        <p class="chart-subtitle">Monitoramento em tempo real com análise preditiva de IA</p>
+                    </div>
+                    <div class="chart-filters">
+                        <span class="filter-chip active">24 Horas</span>
+                        <span class="filter-chip">7 Dias</span>
+                    </div>
+                </div>
+
+                <div class="chart-area">
+                    <svg class="chart-svg" preserveAspectRatio="none" viewBox="0 0 1000 300">
+                        <path d="M0 250 L200 250 L250 150 L300 250 L500 250 L550 50 L650 50 L700 250 L1000 250" fill="none" stroke="#3c9cd6" stroke-width="3"></path>
+                        <path d="M0 250 L200 250 L250 150 L300 250 L500 250 L550 50 L650 50 L700 250 L1000 250 L1000 300 L0 300 Z" fill="#3c9cd6" fill-opacity="0.05"></path>
+                        <circle class="pulse-circle" cx="250" cy="150" fill="#ba1a1a" r="6"></circle>
+                    </svg>
+
+                    <div class="annotation" style="left: 25%; top: 40%;">
+                        <div class="annotation-box">
+                            <p class="anno-title">Torneira</p>
+                            <p class="anno-time">08:12 - 08:15</p>
+                        </div>
+                        <div class="anno-line"></div>
+                    </div>
+
+                    <div class="annotation" style="left: 60%; top: 10%;">
+                        <div class="annotation-box">
+                            <p class="anno-title">Chuveiro</p>
+                            <p class="anno-time">12:45 - 13:10</p>
+                        </div>
+                        <div class="anno-line"></div>
+                    </div>
+
+                    <div class="alert-badge" style="left: 35%; top: 25%;">
+                        <span class="material-symbols-outlined">warning</span>
+                        <p>Possível Vazamento</p>
+                    </div>
+                </div>
+
+                <div class="chart-footer-info">
+                    <div class="legend">
+                        <div class="legend-item"><span class="dot-blue"></span> Consumo Regular</div>
+                        <div class="legend-item"><span class="dot-red"></span> Anomalia IA</div>
+                    </div>
+                    <span class="live-feed">LIVE DATA FEED: 128.0.0.1:8080</span>
+                </div>
+            </section>
+        </div>
+
+        <footer class="main-footer">
+            <div class="footer-copy">© 2026 Vazou AI? All rights reserved.</div>
+            <div class="footer-nav">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Environmental Impact</a>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>

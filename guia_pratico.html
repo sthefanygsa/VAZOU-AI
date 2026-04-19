@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vazou AI? | Guia Prático</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="assets/guia_pratico.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Vazou AI?</div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Guia Prático</a></li>
+            </ul>
+            <button class="btn-login">Dashboard</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header>
+            <h1>Documentação Técnica</h1>
+            <p>Guia completo para montagem do hardware e configuração do firmware para o sistema de monitoramento inteligente.</p>
+        </header>
+
+        <section class="doc-section">
+            <h2 class="section-title">Aprenda a Montar</h2>
+            
+            <div class="video-placeholder">
+                <div class="play-btn">
+                    <span class="material-symbols-outlined" style="font-size: 40px; font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200" alt="Hardware" class="img-bg">
+            </div>
+
+            <div class="split-grid">
+                <div>
+                    <h3 class="list-title">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        Lista de Materiais
+                    </h3>
+                    <ul class="materials-list">
+                        <li><div class="dot"></div> ESP32 DevKit V1 (30 pinos)</li>
+                        <li><div class="dot"></div> Sensor de Fluxo YF-S201</li>
+                        <li><div class="dot"></div> Resistor 10k Ohms</li>
+                        <li><div class="dot"></div> Jumpers Macho-Fêmea</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="list-title">
+                        <span class="material-symbols-outlined">account_tree</span>
+                        Esquema de Ligação
+                    </h3>
+                    <div class="diagram-box">
+                        <span class="material-symbols-outlined" style="font-size: 48px; margin-bottom: 10px;">draw</span>
+                        <p style="font-size: 0.7rem;">DIAGRAMA_CONEXOES_V1.PDF</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Repositório de Códigos</h2>
+            <div class="code-grid">
+                <div class="code-card">
+                    <div class="card-header">
+                        <span class="badge">Firmware</span>
+                        <span class="material-symbols-outlined icon-muted">memory</span>
+                    </div>
+                    <h3 class="card-title">Firmware ESP32 C++</h3>
+                    <p class="card-desc">Código em C++ para leitura de pulsos do sensor e envio via protocolo MQTT.</p>
+                    
+                    <div class="code-block">
+                        <code>
+                            const char* ssid = "WIFI_NOME";<br>
+                            const char* pass = "WIFI_SENHA";<br>
+                            const char* broker = "mqtt.vazouai.io";
+                        </code>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn-action btn-fill">
+                            <span class="material-symbols-outlined" style="font-size: 18px;">download</span>
+                            Baixar
+                        </button>
+                        <button class="btn-action btn-outline">
+                            <span class="material-symbols-outlined" style="font-size: 18px;">content_copy</span>
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="code-card">
+                    <div class="card-header">
+                        <span class="badge">Analytics</span>
+                        <span class="material-symbols-outlined icon-muted">terminal</span>
+                    </div>
+                    <h3 class="card-title">Integrador Python</h3>
+                    <p class="card-desc">Script para processamento de dados e interface com a API de IA.</p>
+                    
+                    <div class="code-block">
+                        <code>
+                            import paho.mqtt.client as mqtt<br>
+                            API_KEY = "VAZOU_AI_6452"<br>
+                            TOPIC = "sensors/flow"
+                        </code>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn-action btn-fill">
+                            <span class="material-symbols-outlined" style="font-size: 18px;">download</span>
+                            Baixar
+                        </button>
+                        <button class="btn-action btn-outline">
+                            <span class="material-symbols-outlined" style="font-size: 18px;">content_copy</span>
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 VAZOU AI? ALL RIGHTS RESERVED.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
